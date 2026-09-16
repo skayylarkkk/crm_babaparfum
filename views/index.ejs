@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRM Baba Parfum</title>
+</head>
+
+<body>
+    <h1>Daftar Prospek CRM Baba Parfum</h1>
+    <ul>
+        <% if (prospek && prospek.length > 0) { %>
+            <% prospek.forEach(item => { %>
+                <li>
+                    <%= item.nama %> -
+                        <%= item.kontak %> (
+                            <%= item.status %>)</li>
+                <% }) %>
+                    <% } else { %>
+                        <p>Belum ada data prospek di database.</p>
+                        <% } %>
+    </ul>
+</body>
+
+</html>
